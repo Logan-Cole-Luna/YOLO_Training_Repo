@@ -12,12 +12,13 @@ if __name__ == '__main__':
     # Print the normalization type, default to 'batch' if not specified
     #print(f'\nNormalization type: {model.model.yaml.get("norm_type", "batch")} normalization\n')
 
+
     # results = model.train(data="coco128.yaml", epochs=1000, imgsz=640, batch=4)
 
     # Train the model with specified parameters
     results = model.train(
         #data="coco128.yaml",       # Path to the dataset configuration file
-        data="C:/VSCode/datasets/robosub_images_new/robosub_dataset_new.yaml",
+        data="C:/VSCode/datasets/unified/unified_dataset.yaml",
         model="yolov10n.pt",                     # Model weights to start with (YOLOv8 Nano)
         epochs=100,                             # Total number of training epochs
         # imgsz=640,                              # Image size (pixels) used for training
@@ -44,7 +45,7 @@ if __name__ == '__main__':
         # lrf=0.01,                               # Final learning rate factor for decay
         # momentum=0.937,                         # Momentum for optimizer
         # weight_decay=0.0005,                    # Regularization strength (weight decay)
-        project="YoloV10RobosubV2",       # Folder where results are saved
+        project="YoloV10RobosubV3",       # Folder where results are saved
         name="Attempt",                        # Experiment name for this training run
         plots=True,                             # Generate training plots after each epoch
         visualize=True,                         # Visualize model predictions during training
